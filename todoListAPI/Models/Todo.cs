@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using MongoDB.Bson;
@@ -13,15 +14,19 @@ namespace todoListAPI.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
+        [Required]
         [BsonElement("Name")]
         public string Name { get; set; }
 
+        [Required]
         [BsonElement("Date")]
         public DateTime Date { get; set; }
 
+        [Required]
         [BsonElement("UserId")]
         public string UserId { get; set; }
 
+        [Required]
         [BsonElement("Done")]
         public bool Done { get; set; }
     }
