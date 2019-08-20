@@ -26,22 +26,33 @@ namespace todoListAPI.Controllers
             return _todoService.Get();
         }
 
-        // POST api/values
+        // POST api/todos
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<Todo> Post(Todo todo)
         {
+            return _todoService.Create(todo);
         }
 
-        // PUT api/values/5
+        // PUT api/todos/{informar id}
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(string id, Todo todo)
         {
+            var t = _todoService.Get(id);
+
+            if (t == null)
+            {
+                return NotFound();
+            }
+
+            _todoService.Update(todo, id);
+            return NoContent();
         }
 
-        // DELETE api/values/5
+        // PUT api/todos/{informar id}
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(string id)
         {
+            _todoService.Remove(id);
         }
     }
 }
