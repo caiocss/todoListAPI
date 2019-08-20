@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using todoListAPI.Models;
+using todoListAPI.Service;
 
 namespace todoListAPI.Controllers
 {
@@ -10,18 +12,18 @@ namespace todoListAPI.Controllers
     [ApiController]
     public class TodosController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly TodoService _todoService;
+
+        public TodosController(TodoService todoService)
         {
-            return new string[] { "value1", "value2" };
+            _todoService = todoService;
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        // GET api/todos
+        [HttpGet]
+        public ActionResult<List<Todo>> Get()
         {
-            return "value";
+            return _todoService.Get();
         }
 
         // POST api/values
