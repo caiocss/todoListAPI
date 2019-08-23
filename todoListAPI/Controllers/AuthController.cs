@@ -34,10 +34,16 @@ namespace todoListAPI.Controllers
 
         // GET: api/Auth/Id do usuário
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public User Get(string id)
         {
-            return "value";
+            return _authService.Get(id);
         }
+
+        //[HttpPost]
+        //public ActionResult<Todo> Post(Todo todo)
+        //{
+        //    return _todoService.Create(todo);
+        //}
 
         // POST: api/Auth
         [AllowAnonymous]
@@ -45,21 +51,21 @@ namespace todoListAPI.Controllers
         public object Post([FromBody] User usuario)
         {
             bool credenciaisValidas = false;
-            if (usuario != null && !String.IsNullOrWhiteSpace(usuario.Id))
+            if (usuario != null && !String.IsNullOrWhiteSpace(usuario.Username))
             {
-                var usuarioBase = _authService.Get(usuario.Id);
+                var usuarioBase = _authService.Get(usuario.Username);
                 credenciaisValidas = (usuarioBase != null &&
-                    usuario.Id == usuarioBase.Id &&
+                    usuario.Username == usuarioBase.Username &&
                     usuario.Password == usuarioBase.Password);
             }
 
             if (credenciaisValidas)
             {
                 ClaimsIdentity identity = new ClaimsIdentity(
-                    new GenericIdentity(usuario.Id, "Login"),
+                    new GenericIdentity(usuario.Username, "Login"),
                     new[] {
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString("N")),
-                        new Claim(JwtRegisteredClaimNames.UniqueName, usuario.Id)
+                        new Claim(JwtRegisteredClaimNames.UniqueName, usuario.Username)
                     }
                 );
 
@@ -100,12 +106,14 @@ namespace todoListAPI.Controllers
 
 
         // PUT: api/Auth/5
+        [Authorize("Bearer")]
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
         // DELETE: api/ApiWithActions/5
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

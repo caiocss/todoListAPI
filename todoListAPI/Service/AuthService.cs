@@ -18,9 +18,9 @@ namespace todoListAPI.Service
             _user = database.GetCollection<User>("users");
         }
 
-        public User Get(string id)
+        public User Get(string username)
         {
-            var user = _user.Find(t => t.Id == id).FirstOrDefault();
+            var user = _user.Find(t => t.Username == username).FirstOrDefault();
             return user;
         }
 

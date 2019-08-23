@@ -14,10 +14,10 @@ namespace todoListAPI.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         [Required]
-        [BsonElement("Name")]
+        [BsonElement("Username")]
         public string Username { get; set; }
         [Required]
-        [BsonElement("Name")]
+        [BsonElement("Password")]
         public string Password { get; set; }
     }
 }

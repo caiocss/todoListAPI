@@ -24,9 +24,9 @@ namespace todoListAPI.Service
             return _todos.Find(t => true).ToList();
         }
 
-        public Todo Get(string id)
+        public List<Todo> Get(string id)
         {
-            var todo = _todos.Find(t => t.Id == id).FirstOrDefault();
+            var todo = _todos.Find(t => t.UserId == id).ToList();
             return todo;
         }
 

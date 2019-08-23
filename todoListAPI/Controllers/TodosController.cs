@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using todoListAPI.Models;
 using todoListAPI.Service;
@@ -20,13 +21,22 @@ namespace todoListAPI.Controllers
         }
 
         // GET api/todos
+        [Authorize("Bearer")]
         [HttpGet]
         public ActionResult<List<Todo>> Get()
         {
             return _todoService.Get();
         }
 
+        [Authorize("Bearer")]
+        [HttpGet("{username}")]
+        public ActionResult<List<Todo>> Get(string username)
+        {
+            return _todoService.Get(username);
+        }
+
         // POST api/todos
+        [Authorize("Bearer")]
         [HttpPost]
         public ActionResult<Todo> Post(Todo todo)
         {
@@ -34,6 +44,7 @@ namespace todoListAPI.Controllers
         }
 
         // PUT api/todos/{informar id}
+        [Authorize("Bearer")]
         [HttpPut("{id}")]
         public IActionResult Put(string id, Todo todo)
         {
@@ -49,6 +60,7 @@ namespace todoListAPI.Controllers
         }
 
         // PUT api/todos/{informar id}
+        [Authorize("Bearer")]
         [HttpDelete("{id}")]
         public void Delete(string id)
         {

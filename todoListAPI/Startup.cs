@@ -76,7 +76,7 @@ namespace todoListAPI
 
             //Adicionando o serviço como injeção de dependencia para utilizar apenas uma instancia.
             services.AddScoped<TodoService>();
-
+            services.AddScoped<AuthService>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
