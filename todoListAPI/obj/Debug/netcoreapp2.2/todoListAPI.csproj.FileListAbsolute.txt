@@ -12,3 +12,17 @@ C:\Users\caioc\workspace\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoLis
 C:\Users\caioc\workspace\todoListAPI\todoListAPI\bin\Debug\netcoreapp2.2\todoListAPI.pdb
 C:\Users\caioc\workspace\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.dll
 C:\Users\caioc\workspace\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.pdb
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\bin\Debug\netcoreapp2.2\todoListAPI.deps.json
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\bin\Debug\netcoreapp2.2\todoListAPI.runtimeconfig.json
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\bin\Debug\netcoreapp2.2\todoListAPI.runtimeconfig.dev.json
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\bin\Debug\netcoreapp2.2\todoListAPI.dll
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\bin\Debug\netcoreapp2.2\todoListAPI.pdb
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.csprojAssemblyReference.cache
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.csproj.CoreCompileInputs.cache
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.RazorAssemblyInfo.cache
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.RazorAssemblyInfo.cs
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.AssemblyInfoInputs.cache
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.AssemblyInfo.cs
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.RazorTargetAssemblyInfo.cache
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.dll
+C:\Users\caioc\workspace\todoList\todoListAPI\todoListAPI\obj\Debug\netcoreapp2.2\todoListAPI.pdb

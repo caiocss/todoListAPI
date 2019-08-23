@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\caioc\\workspace\\todoListAPI\\todoListAPI\\todoListAPI.csproj": {}
+    "C:\\Users\\caioc\\workspace\\todoList\\todoListAPI\\todoListAPI\\todoListAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\caioc\\workspace\\todoListAPI\\todoListAPI\\todoListAPI.csproj": {
+    "C:\\Users\\caioc\\workspace\\todoList\\todoListAPI\\todoListAPI\\todoListAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\caioc\\workspace\\todoListAPI\\todoListAPI\\todoListAPI.csproj",
+        "projectUniqueName": "C:\\Users\\caioc\\workspace\\todoList\\todoListAPI\\todoListAPI\\todoListAPI.csproj",
         "projectName": "todoListAPI",
-        "projectPath": "C:\\Users\\caioc\\workspace\\todoListAPI\\todoListAPI\\todoListAPI.csproj",
+        "projectPath": "C:\\Users\\caioc\\workspace\\todoList\\todoListAPI\\todoListAPI\\todoListAPI.csproj",
         "packagesPath": "C:\\Users\\caioc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\caioc\\workspace\\todoListAPI\\todoListAPI\\obj\\",
+        "outputPath": "C:\\Users\\caioc\\workspace\\todoList\\todoListAPI\\todoListAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
